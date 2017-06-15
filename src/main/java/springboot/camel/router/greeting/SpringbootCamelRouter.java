@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package sample.camel;
+package springboot.camel.router.greeting;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
@@ -25,7 +25,7 @@ import org.springframework.stereotype.Component;
  * Use <tt>@Component</tt> to make Camel auto detect this route when starting.
  */
 @Component
-public class SampleCamelRouter extends RouteBuilder {
+public class SpringbootCamelRouter extends RouteBuilder {
 
     @Override
     public void configure() throws Exception {

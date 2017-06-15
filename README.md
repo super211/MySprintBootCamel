@@ -1,6 +1,17 @@
-# Camel Example Spring Boot
+# `Camel Example Spring Boot`
 
-This example shows how to work with a simple Apache Camel application using Spring Boot.
+======================================================
+## Triggered Greeting
+Set the scheduler to trigger the greeting
+
+## File Copy
+Orignal Method: FileCopierWithCamel
+
+SpringBoot Method: FileCopierWithCamelSpringboot
+
+======================================================
+
+The original example shows how to work with a simple Apache Camel application using Spring Boot.
 
 The example generates messages using timer trigger, writes them to standard output.
 

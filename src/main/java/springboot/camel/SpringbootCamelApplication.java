@@ -14,25 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package sample.camel;
+package springboot.camel;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//CHECKSTYLE:OFF
 /**
- * A bean that returns a message when you call the {@link #saySomething()} method.
- * <p/>
- * Uses <tt>@Component("myBean")</tt> to register this bean with the name <tt>myBean</tt>
- * that we use in the Camel route to lookup this bean.
+ * A sample Spring Boot application that starts the Camel routes.
  */
-@Component("myBean")
-public class SampleBean {
+@SpringBootApplication
+public class SpringbootCamelApplication {
 
-    @Value("${greeting}")
-    private String say;
-
-    public String saySomething() {
-        return say;
+    /**
+     * A main method to start this application.
+     */
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootCamelApplication.class, args);
     }
 
 }
+//CHECKSTYLE:ON
