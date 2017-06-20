@@ -1,3 +1,4 @@
+package springboot.camel.router.ftpserver;
 /*package springboot.camel.router.ftpjms;
 
 import javax.jms.ConnectionFactory;

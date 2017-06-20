@@ -1,4 +1,4 @@
-package springboot.camel.router.ftpupload;
+package springboot.camel.router.ftpclient;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.properties.PropertiesComponent;
@@ -18,7 +18,7 @@ public class FtpClientExampleSpringboot extends RouteBuilder {
 		 */
 		PropertiesComponent pc = new PropertiesComponent();
 		pc.setLocation("classpath:ftp.properties");
-		getContext().addComponent("properties2", pc);
+		getContext().addComponent("properties", pc);
 
 		/*from("file:target/upload?moveFailed=../error").log("Uploading file ${file:name}").to("{{ftp.client}}")
 				.log("Uploaded file ${file:name} complete.");*/

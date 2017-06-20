@@ -1,4 +1,4 @@
-package springboot.camel.router.ftpjms;
+package springboot.camel.router.ftpserver;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.properties.PropertiesComponent;
@@ -37,7 +37,7 @@ public class FtpServerExampleSpringboot extends RouteBuilder {
 		 */
 		PropertiesComponent pc = new PropertiesComponent();
 		pc.setLocation("classpath:ftp.properties");
-		getContext().addComponent("properties", pc);
+		getContext().addComponent("properties2", pc);
 		
 		
 		from("{{ftp.client}}").to("file:target/download").log("Downloaded file ${file:name} complete.");
